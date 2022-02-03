@@ -11,12 +11,15 @@ source:
 
 build:
   number: 0
-
+  # lcms2 is not buildable on win-32
+  skip: true  # [win32]
 requirements:
   build:
     - {{ compiler('c') }}
     - cmake
     - lcms2
+    - ninja  # [unix]
+    - make   # [unix]
     - jpeg
   host:
     - lcms2
