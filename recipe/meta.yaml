@@ -1,0 +1,37 @@
+{% set version = "2.0.3" %}
+
+package:
+  name: libmng
+  version: {{ version }}
+
+source:
+  fn: libmng-{{ version }}.tar.xz
+  url: http://sourceforge.net/projects/libmng/files/libmng-devel/{{ version }}/libmng-{{ version }}.tar.xz/download
+  sha256: 4a462fdd48d4bc82c1d7a21106c8a18b62f8cc0042454323058e6da0dbb57dd3
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - cmake
+    - lcms2
+    - jpeg
+  host:
+    - lcms2
+    - jpeg
+    - zlib
+
+about:
+  home: http://www.libpng.org/pub/mng/
+  license: libmng
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'MNG is the animation extension to the popular PNG image-format.'
+  doc_url: https://sourceforge.net/projects/libmng/
+  dev_url: https://sourceforge.net/projects/libmng/
+
+extra:
+  recipe-maintainers:
+    - katietz
