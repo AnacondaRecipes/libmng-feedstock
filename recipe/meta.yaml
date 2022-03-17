@@ -16,8 +16,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - cmake
-    - lcms2
-    - jpeg
+    - ninja
   host:
     - lcms2
     - jpeg
