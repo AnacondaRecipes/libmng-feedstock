@@ -18,8 +18,8 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - lcms2
-    - ninja  # [unix]
-    - make   # [unix]
+    - ninja
+    - make #[unix]
     - jpeg
   host:
     - lcms2
